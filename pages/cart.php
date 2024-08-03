@@ -8,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 </head>
-<div>
 <?php include '../includes/navbar.php' ?>
     <div class="container-md mt-3">
         <h1>Shopping Cart</h1>
@@ -21,6 +20,7 @@
       <th scope="col">Price</th>
       <th scope="col">Quantity</th>
       <th scope="col">Total</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -29,11 +29,14 @@
         <div class="d-flex">
             <img src="../assets/images/whey_protein_powder.jpg" height="100vh" />
         </div>
+        <div class="container-md d-flex">
+        
         <div class="container-md">
             Product name 
          <div class="container-md">
             Description
          </div>
+        </div>
         </div>
     </th>
       <td>
@@ -46,6 +49,10 @@
         </div>
       </td>
       <td>$$$$</td>
+      <td>
+      <button class="btn btn-danger ">Remove</button>
+
+      </td>
     </tr>
     <tr>
       <th scope="row" class="d-flex">

@@ -7,10 +7,10 @@
       <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="../php/gethome.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Cart</a>
+            <a class="nav-link" href="../pages/cart.php">Cart</a>
           </li>
           
           

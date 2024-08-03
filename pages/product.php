@@ -11,7 +11,7 @@
 <body>
     <?php include '../includes/navbar.php' ?>
     <div class="conatainer-md d-flex mt-3 ">
-        <div class="container-md bg-primary d-flex justify-content-center">
+        <div class="container-md d-flex justify-content-center">
             <div class="d-flex">
                 <img src="../assets/images/whey_protein_powder.jpg" height="500vh" />
             </div>

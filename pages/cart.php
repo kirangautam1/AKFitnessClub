@@ -64,7 +64,7 @@ $cart_total = 0;
                       <button type="button" class="btn btn-outline-secondary" onclick="updateQuantity(this, -1)">-</button>
                     </div>
                     <input type="hidden" name="product_id" value="<?php echo $data['product_id']; ?>">
-                    <input type="number" name="quantity" class="form-control text-center" value="<?php echo $data['quantity']; ?>" min="1" readonly>
+                    <input type="number" name="quantity" class="form-control text-center" value="<?php echo $data['quantity']; ?>" min="1" readonly style="width: 60px;">
                     <div class="input-group-append">
                       <button type="button" class="btn btn-outline-secondary" onclick="updateQuantity(this, 1)">+</button>
                     </div>

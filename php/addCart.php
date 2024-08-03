@@ -19,15 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         }
 
-
-
-
-
-
-
-
-
-
     } elseif ($_POST['action'] === 'order') {
         
     }

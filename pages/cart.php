@@ -41,6 +41,7 @@ $cart_total = 0;
           </thead>
           <tbody>
             <?php 
+            if($products!=null){
             foreach($products as $data){
             ?>
             <tr>
@@ -79,20 +80,32 @@ $cart_total = 0;
               <?php 
               $cart_total += $product_total ;
               ?>
-
               </td>
-              <td>
-                <button class="btn btn-danger ">Remove</button>
+              <form action='../php/removeCart.php' method="POST">
+                <td>
+                  <input type="hidden" name="id" value="<?php echo $data['product_id']  ?>">
+                  <button class="btn btn-danger" type="submit" value="remove" name="action">Remove</button>
+  
+                </td>
 
-              </td>
+              </form>
             </tr>
             <?php
             }
+              ?>
+              
+              <?php
+            }
+            
             ?>
 
             
           </tbody>
         </table>
+        <?php 
+        if($products!=null){
+          ?>
+        
         <div class="row m-4 summary d-flex flex-column justify-content-center align-items-center ">
           <div class="col-5">          
           <div>
@@ -116,6 +129,7 @@ $cart_total = 0;
           <button class="btn btn-warning ">CHECKOUT</button>
           </div>
         </div>
+        
       </div>
       <div class="container-md d-flex">
         <div class="d-flex">
@@ -128,6 +142,13 @@ $cart_total = 0;
           <img src="../assets/images/whey_protein_powder.jpg" height="100vh" />
         </div>
       </div>
+      <?php
+        }else{
+          echo '
+          <div class="row d-flex justify-content-center mt-4"> <h2 class="text-center"> Your Cart is Empty </h2> </div>
+          ';
+        }
+        ?>
     </div>
   </div>
 </body>

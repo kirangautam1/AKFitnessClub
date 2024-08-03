@@ -10,7 +10,7 @@
             <a class="nav-link" href="../php/gethome.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../pages/cart.php">Cart</a>
+            <a class="nav-link" href="../php/readyCart.php">Cart</a>
           </li>
           
           

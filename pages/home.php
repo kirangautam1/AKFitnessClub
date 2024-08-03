@@ -1,3 +1,7 @@
+<?php
+session_start();
+$products = $_SESSION['products'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,12 +21,16 @@
     </div>
     <div class="container-md">
         <!-- This is card -->
+         <?php 
+         foreach ($products as $data) {
+            if ($data['keyword'] == 'featured') {
+            ?>
         <div class="card mt-2" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="../assets/images/<?php echo $data['product_image']   ?> " class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title"> <?php echo $data['product_name']?></h5>
+                <p class="card-text">Price: <strong><?php echo $data['product_price']?></strong></p>
+                <a href="../php/productInfo.php?id=<?php echo $data['product_id']   ?>" class="btn btn-primary">View Products</a>
             </div>
         </div>
     </div>

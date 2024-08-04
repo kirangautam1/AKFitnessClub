@@ -8,7 +8,7 @@
 ### Technology Stack
 
 **Frontend**: HTML, Bootstrap and Custom CSS 
-**Backend**: PHP  
+** Backend **: PHP  
 **Database**: MySql
 **Server**: localhost using XAMPP
 

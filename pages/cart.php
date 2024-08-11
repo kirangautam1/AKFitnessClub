@@ -114,7 +114,10 @@ $cart_total = 0;
               <div class="col">TOTAL PRICE</div>
               <div class="col text-right"> &dollar; <strong>  <?php echo number_format($cart_total * 1.13, 2); ?> </strong> </div>    
             </div>
-            <button class="btn btn-warning ">CHECKOUT</button>
+            <form action="../pages/checkout.php">
+              
+              <button class="btn btn-warning " >CHECKOUT</button>
+            </form>
           </div>
         </div>
         <?php

@@ -1,21 +1,34 @@
 <?php
+require_once('connection.php');
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $product_id = $_POST['product_id'];
-  $new_quantity = $_POST['quantity'];
+    // Sanitize input
+    $product_id = intval($_POST['product_id']);
+    $new_quantity = intval($_POST['quantity']);
 
-  // Update the session cart
-  foreach ($_SESSION['cart_products'] as &$product) {
-    if ($product['product_id'] == $product_id) {
-      $product['quantity'] = $new_quantity;
-      break;
+    // Update the session cart
+    foreach ($_SESSION['cart_products'] as &$product) {
+        if ($product['product_id'] == $product_id) {
+            $product['quantity'] = $new_quantity;
+            break;
+        }
     }
-  }
 
-  // Optionally update the cart in the database if needed
+    // Update the cart in the database
+    $qry = "UPDATE tbl_cart SET quantity = ? WHERE product_id = ?";
+    $statement = $connect->prepare($qry);
+    $statement->bind_param('ii', $new_quantity, $product_id);
+    if($statement->execute()){
+      header('Location:../pages/cart.php');
+    }
 
-  // Redirect back to the cart page
-  header('Location: ../pages/cart.php');
-  exit();
+   
+    $statement->close();
+    
+    // Close the database connection if necessary
+    $connect->close();
+
+    exit();
 }
+?>

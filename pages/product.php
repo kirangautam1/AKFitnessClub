@@ -46,14 +46,16 @@ $data = $_SESSION['current_product'];
                 <h4 class="d-flex justify-content-center"> <strong> $ <?php echo $data['product_price']?> </strong></h4>
             </div>
             <div class="container-md">
+                Category : 
+                <button class="btn btn-light" disabled > <?php echo $data['product_category']?></button>
+            </div>
+            <div class="container-md">
                 <p class="text-justify"> 
                 <?php echo $data['long_description']?>
                 </p>
             </div>
-            <div class="container-md">
-                Category : 
-                <button class="btn btn-light" disabled > <?php echo $data['product_category']?></button>
-            </div>
+            
+            
             <form action="../php/addCart.php" method="POST">
 
                 <div class="container-md mt-3">

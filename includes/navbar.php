@@ -12,6 +12,9 @@
           <li class="nav-item">
             <a class="nav-link" href="../php/readyCart.php">Cart</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/login.php">Admin</a>
+          </li>
           
           
         </ul>

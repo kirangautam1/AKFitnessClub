@@ -21,8 +21,8 @@ $cart_total = 0;
 
 <body>
 
-    Checkout
-    <div class="container d-flex">
+    
+    <div class="container d-flex mt-4">
         <div class="container ">
             <div class="col-md-8 order-md-1">
                 <h4 class="mb-3">Billing address</h4>
@@ -30,12 +30,12 @@ $cart_total = 0;
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="firstName">First name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                            <input type="text" class="form-control" id="firstName" placeholder="" value="" >
 
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="lastName">Last name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                            <input type="text" class="form-control" id="lastName" placeholder="" value="" >
 
                         </div>
                     </div>
@@ -47,14 +47,14 @@ $cart_total = 0;
                     <div class="row">
                         <div class="col-md-5 mb-3">
                             <label for="country">Country</label>
-                            <select class="custom-select d-block w-100" id="country" required>
+                            <select class="custom-select d-block w-100" id="country" >
                                 <option selected>Canada</option>
                             </select>
 
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="state">State</label>
-                            <select class="custom-select d-block w-100" id="state" required>
+                            <select class="custom-select d-block w-100" id="state" >
                                 <option value="AB" selected>Alberta</option>
                                 <option value="BC">British Columbia</option>
                                 <option value="MB">Manitoba</option>
@@ -73,7 +73,7 @@ $cart_total = 0;
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="zip">Zip</label>
-                            <input type="text" class="form-control" id="zip" placeholder="A1A 1A1" required>
+                            <input type="text" class="form-control" id="zip" placeholder="A1A 1A1" >
 
                         </div>
                     </div>
@@ -84,26 +84,24 @@ $cart_total = 0;
                     <div class="d-block my-3">
                         <div class="custom-control custom-radio">
                             <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked
-                                required>
+                                >
                             <label class="custom-control-label" for="credit">Credit card</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" >
                             <label class="custom-control-label" for="debit">Debit card</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" >
                             <label class="custom-control-label" for="paypal">PayPal</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="cc-name">Name on card</label>
-                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                            <input type="text" class="form-control" id="cc-name" placeholder="" >
                             <small class="text-muted">Full name as displayed on card</small>
-                            <div class="invalid-feedback">
-                                Name on card is required
-                            </div>
+                           
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="cc-number">Credit card number</label>
@@ -115,21 +113,17 @@ $cart_total = 0;
                     <div class="row">
                         <div class="col-md-3 mb-3">
                             <label for="cc-expiration">Expiration</label>
-                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                            <div class="invalid-feedback">
-                                Expiration date required
-                            </div>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="" >
+                           
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="cc-cvv">CVV</label>
-                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                            <div class="invalid-feedback">
-                                Security code required
-                            </div>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" >
+                            
                         </div>
                     </div>
                     <hr class="mb-4">
-                    <button class="btn btn-warning btn-lg btn-block" type="submit">Place Order</button>
+                    <button class="btn btn-warning btn-lg btn-block" type="submit" name="checkout">Place Order</button>
                 </form>
             </div>
         </div>
